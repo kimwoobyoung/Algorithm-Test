@@ -4,14 +4,11 @@ class Solution {
         int sum = 0;
         int mul = 1;
         
-        for(int i = 0; i < num_list.length; i++){
-            sum += num_list[i];
-            mul *= num_list[i];
+        for(int i : num_list){
+            sum += i;
+            mul *= i;
         }
-        
-        if(mul < sum * sum) {
-            answer = 1;
-        }
+        answer = Math.pow(sum,2) > mul ? 1 : 0;
         
         return answer;
     }
