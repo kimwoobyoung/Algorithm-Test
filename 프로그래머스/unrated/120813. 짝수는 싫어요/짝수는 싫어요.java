@@ -1,19 +1,15 @@
-import java.util.ArrayList;
+import java.util.*;
 
 class Solution {
-    public int[] solution(int n) {
-        ArrayList<Integer> answerList = new ArrayList<>();
+    public ArrayList solution(int n) {
+        ArrayList<Integer> answer = new ArrayList<Integer>();
         
-        for (int i = 0; i <= n; i++) {
-            if (i % 2 != 0) {
-                answerList.add(i);
+        for(int i=1; i<=n; i++){
+            if(i%2 != 0) {
+                answer.add(i);
             }
         }
         
-        int[] answer = new int[answerList.size()];
-        for (int i = 0; i < answerList.size(); i++) {
-            answer[i] = answerList.get(i);
-        }
         return answer;
     }
 }
